@@ -8,6 +8,8 @@ SampleApp::Application.routes.draw do
 
 #Users Routes
   match '/signup', to: 'users#new', via: 'get'
+  resources :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -37,7 +39,7 @@ SampleApp::Application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-  #   resources :products do
+  #<%= render 'layouts/footer'%>#   resources :products do
   #     resources :comments, :sales
   #     resource :seller
   #   end
