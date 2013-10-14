@@ -11,12 +11,14 @@ def create
     redirect_to user
   else
     #Create an error message and re-render the signin form
-    flash.now[:error] = "Invaid email/password combination"
+    flash.now[:error] = 'Invaid email/password combination'
     render 'new'
   end
 end
 
 def destroy
+  sign_out
+  redirect_to root_url
 end
 
 end
